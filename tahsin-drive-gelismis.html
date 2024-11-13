@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahsin Drive - Güvenli Dosya Depolama</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="images/logo.png" alt="Tahsin Drive Logo" class="logo">
+            <h1>Tahsin Drive</h1>
+            <p>Güvenli, kolay ve hızlı dosya depolama platformu</p>
+            <button id="theme-toggle" class="theme-toggle">🌙 Karanlık Mod</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">Hakkında</a></li>
+            <li><a href="#features">Özellikler</a></li>
+            <li><a href="#testimonials">Yorumlar</a></li>
+            <li><a href="#contact">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hakkında -->
+        <section id="about">
+            <h2>Hakkında</h2>
+            <p>Tahsin Drive, güvenli ve kullanıcı dostu bir bulut depolama platformudur. Dosyalarınızı güvenle saklayabilir, paylaşabilir ve dilediğiniz her yerden erişebilirsiniz.</p>
+            <div class="stats">
+                <div><span id="users">500+</span> Kullanıcı</div>
+                <div><span id="files">10,000+</span> Depolanan Dosya</div>
+                <div><span id="active-users">150</span> Aktif Kullanıcı</div>
+            </div>
+        </section>
+
+        <!-- Özellikler -->
+        <section id="features">
+            <h2>Özellikler</h2>
+            <div class="features-list">
+                <div class="feature">
+                    <img src="images/upload.png" alt="Kolay Dosya Yükleme">
+                    <h3>Kolay Dosya Yükleme</h3>
+                    <p>Dosyalarınızı güvenli ve hızlı bir şekilde yükleyin.</p>
+                </div>
+                <div class="feature">
+                    <img src="images/share.png" alt="Paylaşım Seçenekleri">
+                    <h3>Paylaşım Seçenekleri</h3>
+                    <p>Dosyalarınızı kolayca arkadaşlarınızla paylaşın.</p>
+                </div>
+                <div class="feature">
+                    <img src="images/security.png" alt="Güvenli Depolama">
+                    <h3>Güvenli Depolama</h3>
+                    <p>En yüksek güvenlik standartlarında veri saklama.</p>
+                </div>
+                <div class="feature">
+                    <img src="images/access.png" alt="Her Yerden Erişim">
+                    <h3>Her Yerden Erişim</h3>
+                    <p>Dilediğiniz yerden dosyalarınıza ulaşın.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yorumlar -->
+        <section id="testimonials" style="background-image: url('images/testimonials-bg.jpg');">
+            <h2>Kullanıcı Yorumları</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Tahsin Drive hayatımı kolaylaştırdı. Dosyalarımı güvenle saklayabiliyorum!"</p>
+                    <h4>- Ayşe Yıldız</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Dosyalarımı paylaşmak ve yönetmek çok basit. Harika bir platform!"</p>
+                    <h4>- Mehmet Demir</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim -->
+        <section id="contact">
+            <h2>İletişim</h2>
+            <form id="contactForm">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn-primary">Gönder</button>
+            </form>
+            <div id="formResponse" class="response"></div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<style>
+    /* Body ve Genel Stil */
+body {
+    background-color: #f7f9fc;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ana Bölüm */
+main {
+    padding: 40px 20px;
+}
+
+/* Özellikler */
+.features-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    text-align: center;
+    background: #f1f1f1;
+    padding: 20px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Karanlık Mod
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        themeToggle.innerText = document.body.classList.contains('dark-mode') ? '☀️ Açık Mod' : '🌙 Karanlık Mod';
+    });
+
+    // Dinamik İstatistikler
+    document.getElementById('users').innerText = '520+';  
+    document.getElementById('files').innerText = '1500+';
+});
+
+</script>
